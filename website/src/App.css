@@ -1,0 +1,1100 @@
+
+#root {
+  min-height: 100vh;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, Arial, sans-serif;
+  color: #213b29;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+.agriguard-page {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 32px 16px;
+  background:
+    radial-gradient(ellipse at top left, #e2f3df 0, transparent 45%),
+    #f4f7f1;
+}
+
+.login-card {
+  width: 100%;
+  max-width: 440px;
+  padding: 36px;
+  background: #fff;
+  border: 1px solid #e3e9df;
+  border-radius: 20px;
+  box-shadow: 0 18px 55px rgb(28 65 36 / 10%);
+}
+
+.brand-icon {
+  display: grid;
+  place-items: center;
+  width: 56px;
+  height: 56px;
+  margin-bottom: 18px;
+  background: #e8f5e5;
+  border-radius: 16px;
+  font-size: 30px;
+}
+
+.eyebrow {
+  margin: 0 0 8px;
+  color: #42794a;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.login-card h1 {
+  margin: 0;
+  color: #183c27;
+  font-size: 36px;
+  letter-spacing: -1.5px;
+}
+
+.login-card h1 span,
+.brand-accent {
+  color: #529c54;
+}
+
+.subtitle {
+  margin: 12px 0 28px;
+  color: #657367;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.login-card h2 {
+  margin: 0 0 6px;
+  color: #213b29;
+  font-size: 22px;
+}
+
+.form-description {
+  margin: 0 0 24px;
+  color: #738074;
+  font-size: 13px;
+}
+
+.login-card form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-card label {
+  margin: 0 0 8px;
+  color: #304535;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.login-card input {
+  width: 100%;
+  margin-bottom: 18px;
+  padding: 13px 14px;
+  border: 1px solid #dce5db;
+  border-radius: 9px;
+  outline: none;
+  background: #fcfdfb;
+  color: #24372a;
+  font-size: 14px;
+}
+
+.login-card input:focus {
+  border-color: #529c54;
+  box-shadow: 0 0 0 3px rgb(82 156 84 / 12%);
+}
+
+.login-card button,
+.logout-button,
+.refresh-button {
+  border: 0;
+  border-radius: 9px;
+  background: #28683b;
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.login-card form button {
+  width: 100%;
+  margin-top: 6px;
+  padding: 14px;
+}
+
+.login-card button:hover,
+.logout-button:hover,
+.refresh-button:hover {
+  background: #1e5430;
+}
+
+.login-card button:disabled {
+  opacity: 0.65;
+  cursor: wait;
+}
+
+.status-message {
+  margin: 18px 0 0;
+  padding: 12px;
+  border-radius: 8px;
+  background: #edf6ec;
+  color: #285b34;
+  font-size: 13px;
+  overflow-wrap: anywhere;
+}
+
+.login-card footer {
+  margin-top: 28px;
+  color: #849085;
+  font-size: 11px;
+  text-align: center;
+}
+
+/* Dashboard */
+
+.dashboard-page {
+  min-height: 100vh;
+  background: #f5f8f3;
+}
+
+.dashboard-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 18px max(24px, calc((100% - 1120px) / 2));
+  background: #fff;
+  border-bottom: 1px solid #e5ebe2;
+}
+
+.dashboard-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #183c27;
+  font-size: 24px;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.dashboard-logo {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  background: #e8f5e5;
+  font-size: 23px;
+}
+
+.logout-button {
+  padding: 10px 17px;
+}
+
+.dashboard-content {
+  width: min(1120px, 100%);
+  margin: 0 auto;
+  padding: 42px 24px 24px;
+}
+
+.welcome-section {
+  margin-bottom: 28px;
+}
+
+.welcome-section h1 {
+  margin: 0 0 10px;
+  color: #183c27;
+  font-size: clamp(28px, 4vw, 38px);
+}
+
+.welcome-section > p:last-child {
+  margin: 0;
+  color: #6a786b;
+  line-height: 1.6;
+}
+
+.summary-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  margin-bottom: 36px;
+}
+
+.summary-card {
+  padding: 22px;
+  background: #fff;
+  border: 1px solid #e4ebe1;
+  border-radius: 15px;
+  box-shadow: 0 5px 18px rgb(28 65 36 / 4%);
+}
+
+.summary-icon {
+  font-size: 24px;
+}
+
+.summary-card p {
+  margin: 16px 0 8px;
+  color: #718072;
+  font-size: 13px;
+}
+
+.summary-card strong {
+  color: #183c27;
+  font-size: 28px;
+}
+
+.summary-card .connection-status {
+  color: #328049;
+  font-size: 20px;
+}
+
+.reports-section {
+  padding: 26px;
+  background: #fff;
+  border: 1px solid #e4ebe1;
+  border-radius: 16px;
+}
+
+.section-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 22px;
+}
+
+.section-heading h2 {
+  margin: 0 0 7px;
+  color: #183c27;
+  font-size: 22px;
+}
+
+.section-heading p {
+  margin: 0;
+  color: #718072;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.refresh-button {
+  padding: 10px 16px;
+  white-space: nowrap;
+}
+
+.reports-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.report-card {
+  min-width: 0;
+  padding: 20px;
+  border: 1px solid #e4ebe1;
+  border-radius: 12px;
+  background: #fcfdfb;
+}
+
+.report-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.crop-icon {
+  font-size: 25px;
+}
+
+.status-badge {
+  padding: 6px 10px;
+  border-radius: 20px;
+  background: #eef1ed;
+  color: #566357;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.status-pending {
+  background: #fff3d9;
+  color: #8b620e;
+}
+
+.status-resolved,
+.status-completed,
+.status-approved {
+  background: #e5f5e8;
+  color: #28683b;
+}
+
+.status-rejected,
+.status-failed {
+  background: #fde9e7;
+  color: #a43730;
+}
+
+.report-card h3 {
+  margin: 15px 0 12px;
+  color: #183c27;
+  font-size: 19px;
+}
+
+.report-disease,
+.report-detail,
+.report-notes {
+  color: #59685b;
+  font-size: 13px;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+
+.report-disease strong,
+.report-detail strong {
+  color: #304535;
+}
+
+.report-notes {
+  padding: 10px 12px;
+  border-radius: 8px;
+  background: #f0f5ed;
+}
+
+.report-date {
+  margin: 18px 0 0;
+  padding-top: 12px;
+  border-top: 1px solid #e7ece4;
+  color: #859085;
+  font-size: 11px;
+}
+
+.empty-state,
+.error-state {
+  padding: 35px 18px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.empty-state {
+  background: #f7faf5;
+  border: 1px dashed #d9e5d6;
+}
+
+.empty-icon {
+  font-size: 32px;
+}
+
+.empty-state h3 {
+  margin: 12px 0 8px;
+  color: #254b30;
+}
+
+.empty-state p,
+.error-state p {
+  color: #718072;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.error-state {
+  background: #fff3f1;
+  border: 1px solid #f0d2cd;
+}
+
+.error-state p {
+  color: #933e35;
+}
+
+.dashboard-footer {
+  padding: 30px 0 8px;
+  color: #849085;
+  font-size: 12px;
+  text-align: center;
+}
+
+@media (max-width: 700px) {
+  .summary-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .reports-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .dashboard-content {
+    padding: 28px 16px 20px;
+  }
+
+  .reports-section {
+    padding: 18px;
+  }
+
+  .dashboard-header {
+    padding: 14px 16px;
+  }
+
+  .dashboard-brand {
+    font-size: 21px;
+  }
+}
+
+@media (max-width: 480px) {
+  .login-card {
+    padding: 26px 22px;
+  }
+
+  .section-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+/* AGRIGUARD - SCANNER AND CARE GUIDE */
+
+.scanner-section,
+.plant-guide {
+  width: 100%;
+  padding: 32px;
+  margin: 24px 0;
+  background: #ffffff;
+  border: 1px solid #e1e9df;
+  border-radius: 18px;
+  box-shadow: 0 6px 24px rgba(20, 70, 35, 0.05);
+  color: #243b2a;
+  text-align: left;
+}
+
+.scanner-section h2,
+.plant-guide h2 {
+  margin: 0 0 12px;
+  color: #1d5732;
+  font-size: 26px;
+  font-weight: 750;
+}
+
+.scanner-section > p,
+.plant-guide > p {
+  color: #647569;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.scanner-actions,
+.guide-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 24px 0;
+}
+
+.scanner-actions button,
+.guide-controls button {
+  padding: 13px 22px;
+  border: none;
+  border-radius: 10px;
+  background: #25683d;
+  color: white;
+  font-size: 14px;
+  font-weight: 650;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.scanner-actions button:hover,
+.guide-controls button:hover {
+  background: #194e2d;
+}
+
+.guide-controls button[aria-pressed="false"] {
+  background: #e8f2e7;
+  color: #245b35;
+}
+
+.plant-guide label {
+  display: block;
+  margin: 18px 0 8px;
+  font-weight: 650;
+}
+
+.plant-guide select {
+  width: 100%;
+  max-width: 360px;
+  padding: 12px;
+  border: 1px solid #cddccd;
+  border-radius: 9px;
+  background: white;
+  color: #233b2a;
+  font-size: 15px;
+}
+
+.guide-card {
+  padding: 22px;
+  margin-top: 18px;
+  background: #f5f9f3;
+  border: 1px solid #e2ebdf;
+  border-radius: 14px;
+}
+
+.guide-card h3,
+.guide-card h4 {
+  margin: 0 0 14px;
+  color: #215b35;
+  font-size: 20px;
+}
+
+.guide-card p {
+  margin: 10px 0;
+  line-height: 1.7;
+  color: #415447;
+}
+
+.disease-list {
+  display: grid;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.scanner-preview {
+  margin-top: 24px;
+  padding: 22px;
+  background: #f5f9f3;
+  border: 1px dashed #b8d1b7;
+  border-radius: 14px;
+  text-align: center;
+}
+
+.scanner-preview img {
+  display: block;
+  max-width: 100%;
+  max-height: 350px;
+  margin: 16px auto;
+  object-fit: contain;
+}
+
+.scanner-preview h3 {
+  color: #215b35;
+}
+
+.scanner-preview button {
+  padding: 12px 20px;
+  border: 0;
+  border-radius: 9px;
+  background: #a5b3a6;
+  color: #ffffff;
+  font-weight: 650;
+}
+
+.scanner-preview p {
+  overflow-wrap: anywhere;
+}
+
+.guide-disclaimer {
+  margin-top: 20px;
+  padding: 14px 18px;
+  border-left: 4px solid #d6a34c;
+  background: #fff9ec;
+  border-radius: 8px;
+  font-size: 13px !important;
+  color: #795b2a !important;
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .dashboard-content {
+    width: min(100% - 48px, 1200px);
+    max-width: 1200px;
+    margin-inline: auto;
+  }
+
+  .scanner-section,
+  .plant-guide {
+    padding: 36px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  .scanner-section,
+  .plant-guide {
+    padding: 20px;
+    margin: 16px 0;
+    border-radius: 14px;
+  }
+
+  .scanner-section h2,
+  .plant-guide h2 {
+    font-size: 22px;
+  }
+
+  .scanner-actions,
+  .guide-controls {
+    flex-direction: column;
+  }
+
+  .scanner-actions button,
+  .guide-controls button {
+    width: 100%;
+  }
+
+  .guide-card {
+    padding: 16px;
+  }
+}
+/* Agriguard sidebar layout */
+
+.dashboard-page {
+  display: flex;
+  min-height: 100vh;
+  align-items: stretch;
+}
+
+.app-sidebar {
+  width: 240px;
+  flex-shrink: 0;
+  padding: 28px 18px;
+  background: #194e2d;
+  color: white;
+}
+
+.app-sidebar h2 {
+  margin: 0 0 36px;
+  font-size: 24px;
+  color: white;
+}
+
+.app-sidebar nav {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.app-sidebar button {
+  width: 100%;
+  padding: 14px 16px;
+  background: transparent;
+  border: none;
+  border-radius: 10px;
+  color: #e5f2e7;
+  text-align: left;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.app-sidebar button:hover,
+.app-sidebar button.active {
+  background: #307247;
+  color: white;
+}
+
+.dashboard-content {
+  flex: 1;
+  min-width: 0;
+}
+
+@media (max-width: 768px) {
+  .dashboard-page {
+    flex-direction: column;
+  }
+
+  .app-sidebar {
+    width: 100%;
+    padding: 16px;
+  }
+
+  .app-sidebar h2 {
+    margin-bottom: 16px;
+  }
+
+  .app-sidebar nav {
+    flex-direction: row;
+    overflow-x: auto;
+  }
+
+  .app-sidebar button {
+    flex: 0 0 auto;
+    width: auto;
+    white-space: nowrap;
+  }
+}
+/* AGRIGUARD DARK AND LIGHT THEMES */
+
+:root {
+  --ag-bg: #f4f7f3;
+  --ag-surface: #ffffff;
+  --ag-surface-alt: #edf4ed;
+  --ag-text: #203629;
+  --ag-muted: #65766b;
+  --ag-border: #dce7dd;
+  --ag-accent: #087f61;
+  --ag-sidebar: #194e2d;
+}
+
+:root[data-theme="dark"] {
+  --ag-bg: #15171e;
+  --ag-surface: #252831;
+  --ag-surface-alt: #30343e;
+  --ag-text: #f5f7f6;
+  --ag-muted: #abb3b9;
+  --ag-border: #3c414a;
+  --ag-accent: #0fc79b;
+  --ag-sidebar: #1c2229;
+}
+
+.dashboard-page {
+  background: var(--ag-bg);
+  color: var(--ag-text);
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.dashboard-content {
+  color: var(--ag-text);
+}
+
+.scanner-section,
+.plant-guide,
+.summary-card,
+.reports-section,
+.report-card,
+.guide-card,
+.scanner-preview {
+  background: var(--ag-surface);
+  color: var(--ag-text);
+  border-color: var(--ag-border);
+}
+
+.scanner-section h2,
+.plant-guide h2,
+.guide-card h3,
+.guide-card h4,
+.report-card h3,
+.welcome-section h1 {
+  color: var(--ag-text);
+}
+
+.scanner-section p,
+.plant-guide p,
+.guide-card p,
+.report-card p,
+.welcome-section p {
+  color: var(--ag-muted);
+}
+
+.app-sidebar {
+  background: var(--ag-sidebar);
+}
+
+.app-sidebar button.active {
+  background: var(--ag-accent);
+  color: #ffffff;
+}
+
+.theme-toggle {
+  padding: 10px 16px;
+  border: 1px solid var(--ag-border);
+  border-radius: 10px;
+  background: var(--ag-surface-alt);
+  color: var(--ag-text);
+  font: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.theme-toggle:hover {
+  border-color: var(--ag-accent);
+}
+
+.plant-guide select {
+  background: var(--ag-surface-alt);
+  color: var(--ag-text);
+  border-color: var(--ag-border);
+}
+
+.guide-disclaimer {
+  color: #795b2a !important;
+}
+
+@media (max-width: 768px) {
+  .theme-toggle {
+    padding: 9px 12px;
+    font-size: 12px;
+  }
+}
+
+/* AGRIGUARD RESPONSIVE LAYOUT — isolated override */
+*, *::before, *::after {box-sizing:border-box}
+html,body,#root {margin:0;min-height:100%;width:100%;max-width:none}
+body {min-width:320px;overflow-x:hidden;background:var(--ag-bg);color:var(--ag-text)}
+#root {padding:0;display:block;text-align:left}
+.dashboard-page {display:flex!important;flex-direction:row!important;align-items:stretch!important;width:100%!important;min-height:100vh;margin:0!important;padding:0!important;max-width:none!important;background:var(--ag-bg)!important;color:var(--ag-text)}
+.app-sidebar {position:sticky;top:0;align-self:flex-start;height:100vh;width:238px!important;min-width:238px;flex:0 0 238px;padding:30px 16px;background:var(--ag-sidebar);z-index:5}
+.app-sidebar h2 {margin:0;color:#fff;font-size:24px}
+.sidebar-caption {color:#a9b9b2;font-size:12px;margin:7px 0 30px}
+.app-sidebar nav {display:flex;flex-direction:column;gap:10px}
+.app-sidebar button {width:100%;min-height:46px;text-align:left;padding:12px 15px;border-radius:12px;color:#e1eae7;background:transparent;border:0;font-size:14px}
+.app-sidebar button.active {background:#08a984!important;color:white!important}
+.app-main {flex:1;min-width:0;width:calc(100% - 238px);display:flex;flex-direction:column}
+.dashboard-header {position:relative!important;inset:auto!important;display:flex!important;align-items:center!important;justify-content:flex-end!important;gap:14px!important;flex-wrap:wrap;min-height:76px;width:100%!important;max-width:none!important;margin:0!important;padding:16px clamp(20px,4vw,56px)!important;background:var(--ag-surface)!important;border-bottom:1px solid var(--ag-border)}
+.dashboard-brand {margin-right:auto;color:var(--ag-text)!important}
+.dashboard-content {display:block!important;width:100%!important;max-width:1120px!important;margin:0 auto!important;padding:clamp(22px,4vw,52px)!important;flex:1;min-width:0;background:transparent!important;color:var(--ag-text)!important}
+.welcome-section {text-align:left!important;margin:0 0 25px!important}
+.welcome-section h1 {font-size:clamp(28px,3vw,42px)!important;color:var(--ag-text)!important}
+.scanner-section,.plant-guide,.reports-section,.summary-card,.report-card {background:var(--ag-surface)!important;color:var(--ag-text)!important;border:1px solid var(--ag-border)!important;border-radius:18px!important}
+.scanner-section,.plant-guide,.reports-section {width:100%!important;max-width:none!important;padding:clamp(20px,3vw,34px)!important;margin:0 0 24px!important}
+.scanner-section h2,.plant-guide h2,.reports-section h2,.report-card h3 {color:var(--ag-text)!important}
+.scanner-section p,.plant-guide p,.reports-section p,.report-card p {color:var(--ag-muted)}
+.summary-grid {display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:16px!important;margin-bottom:24px!important}
+.reports-grid {display:grid!important;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))!important;gap:18px!important}
+.report-card {min-width:0;overflow-wrap:anywhere}
+.report-notes {background:var(--ag-surface-alt)!important;color:var(--ag-text)!important}
+.dashboard-footer {color:var(--ag-muted)!important;text-align:center;margin:26px 0}
+.theme-toggle {flex-shrink:0}
+@media(max-width:760px){
+.dashboard-page {display:block!important;padding-bottom:78px!important}
+.app-sidebar {position:fixed!important;top:auto!important;bottom:0!important;left:0!important;right:0!important;width:100%!important;min-width:0!important;height:72px!important;padding:7px 8px!important;border-top:1px solid var(--ag-border);box-shadow:0 -6px 24px #0002;z-index:20}
+.app-sidebar h2,.app-sidebar .sidebar-caption {display:none}
+.app-sidebar nav {display:grid!important;grid-template-columns:repeat(4,minmax(0,1fr));gap:4px;height:100%}
+.app-sidebar button {font-size:11px!important;text-align:center!important;padding:8px 2px!important;min-height:54px;white-space:normal}
+.app-main {width:100%!important;min-width:0}
+.dashboard-header {padding:12px 16px!important;min-height:68px}
+.dashboard-content {padding:20px 16px!important}
+.summary-grid {grid-template-columns:repeat(2,minmax(0,1fr))!important}
+}
+
+.weather-page {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.weather-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 24px 0;
+}
+
+.weather-actions form {
+  display: flex;
+  flex: 1;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.weather-actions input {
+  flex: 1;
+  min-width: 180px;
+  padding: 12px;
+  border: 1px solid var(--ag-border, #d8e2dc);
+  border-radius: 10px;
+}
+
+.weather-actions button {
+  padding: 12px 18px;
+  border: none;
+  border-radius: 10px;
+  background: #16845d;
+  color: white;
+  cursor: pointer;
+}
+
+.weather-actions button:disabled {
+  opacity: 0.6;
+  cursor: wait;
+}
+
+.weather-card {
+  background: var(--ag-surface, white);
+  color: var(--ag-text, #243b2d);
+  border: 1px solid var(--ag-border, #d8e2dc);
+  border-radius: 16px;
+  padding: 24px;
+  margin: 18px 0;
+}
+
+.weather-card h2 {
+  margin-top: 0;
+}
+
+.weather-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 14px;
+  margin-top: 18px;
+}
+
+.weather-stats article {
+  background: var(--ag-bg, #f4f7f1);
+  border: 1px solid var(--ag-border, #d8e2dc);
+  padding: 18px;
+  border-radius: 12px;
+}
+
+.weather-stats span {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.weather-stats strong {
+  font-size: 22px;
+}
+
+.weather-card select {
+  display: block;
+  margin: 12px 0;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.weather-disclaimer {
+  font-size: 12px;
+  opacity: 0.7;
+}
+
+@media (max-width: 600px) {
+  .weather-card {
+    padding: 16px;
+  }
+}
+
+.community-page {
+  max-width: 950px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.community-card {
+  background: var(--ag-surface, white);
+  color: var(--ag-text, #243b2d);
+  border: 1px solid var(--ag-border, #d8e2dc);
+  border-radius: 16px;
+  padding: 24px;
+  margin: 18px 0;
+}
+
+.community-card form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.community-card textarea,
+.community-card select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #cbd5d1;
+  border-radius: 10px;
+  font: inherit;
+  background: var(--ag-bg, #f4f7f1);
+  color: var(--ag-text, #243b2d);
+}
+
+.community-card button,
+.community-feed button {
+  background: #16845d;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 12px 18px;
+  cursor: pointer;
+}
+
+.community-card button:disabled,
+.community-feed button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.community-post-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.community-post-header span {
+  background: #e0f2e9;
+  color: #166534;
+  border-radius: 20px;
+  padding: 5px 12px;
+  font-size: 13px;
+}
+
+.community-post-content {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  line-height: 1.6;
+}
+
+.community-card small {
+  opacity: 0.7;
+}
+
+.community-error {
+  color: #dc2626;
+}
+
+.community-success {
+  color: #16845d;
+}
+
+
+.community-interactions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 18px;
+  padding-top: 14px;
+  border-top: 1px solid #d8e2dc;
+}
+
+.community-interactions button {
+  background: #e7f4ed;
+  color: #166534;
+}
+
+.community-comments {
+  margin-top: 20px;
+}
+
+.community-comment {
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 10px;
+  background: var(--ag-bg, #f4f7f1);
+  overflow-wrap: anywhere;
+}
+
+.community-comment p {
+  white-space: pre-wrap;
+}
+
+.community-comments form {
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.community-comments textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #cbd5d1;
+  border-radius: 10px;
+  background: var(--ag-bg, #f4f7f1);
+  color: var(--ag-text, #243b2d);
+  font: inherit;
+}

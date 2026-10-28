@@ -39,3 +39,34 @@ yarn-error.*
 # generated native folders
 /ios
 /android
+# Environment files and secrets
+.env
+.env.*
+!.env.example
+
+# React / Node
+node_modules/
+dist/
+build/
+
+# PHP
+vendor/
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+
+# Flutter
+.dart_tool/
+.gradle/
+
+# Logs and temporary files
+*.log
+*.tmp
+
+# Exclude old website source backups
+/website/src/*backup*
+/website/src/*before*
+/website/src/*.bak
+/website/src/CommnityPost.jsx
